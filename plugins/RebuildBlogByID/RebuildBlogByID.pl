@@ -39,6 +39,10 @@ sub init_registry {
                 => \&_post_save_entry,
             'api_post_save.page',
                 => \&_post_save_entry,
+            'cms_post_delete.entry'
+                => \&_post_save_entry,
+            'cms_post_delete.page'
+                => \&_post_save_entry,
         },
    } );
 }

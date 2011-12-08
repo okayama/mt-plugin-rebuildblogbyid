@@ -5,7 +5,7 @@ use MT::Plugin;
 
 use MT::Util qw ( start_background_task );
 
-our $VERSION = "1.0.0";
+our $VERSION = "1.0";
 
 @MT::Plugin::RebuildBlogByID::ISA = qw(MT::Plugin);
 

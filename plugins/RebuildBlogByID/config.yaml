@@ -1,0 +1,21 @@
+id: RebuildBlogByID
+name: RebuildBlogByID
+key: rebuildblogbyid
+author_name: okayama
+author_link: http://weeeblog.net/
+description: <MT_TRANS phrase='_PLUGIN_DESCRIPTION'>
+version: 1.0
+l10n_class: RebuildBlogByID::L10N
+settings:
+    only_pulish_status:
+        defalut: 0
+    rebuild_blog_ids_at_saving_entry:
+    rebuild_blog_ids_at_saving_page:
+blog_config_template: rebuildblogbyid_config_blog.tmpl
+callbacks: 
+    cms_post_save.entry: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
+    cms_post_save.page: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
+    api_post_save.entry: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
+    api_post_save.page: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
+    cms_post_delete.entry: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
+    cms_post_delete.page: $rebuildblogbyid::RebuildBlogByID::Callbacks::_cb_cms_post_save_entry
